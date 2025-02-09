@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0" version="26.0.11">
+  <diagram name="Seite-1" id="TdhPVkUZ_WICwNqU2JP3">
+    <mxGraphModel dx="1927" dy="2213" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="km08tWJIqOWvu3msnnxf-25" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-90" width="1150" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-1" value="Mobile App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-2" value="WebUI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="km08tWJIqOWvu3msnnxf-3" target="km08tWJIqOWvu3msnnxf-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-3" value="Backend- Gateway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="120" width="90" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="120" width="750" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-5" value="&lt;b&gt;Analytics&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="170" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-6" value="&lt;b&gt;Bin Management&lt;/b&gt;&lt;div&gt;* sensor data processing&lt;/div&gt;&lt;div&gt;* CRUD for smart bins&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="310" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-7" value="&lt;b&gt;User Management&lt;/b&gt;&lt;div&gt;* Admin&lt;/div&gt;&lt;div&gt;* Drivers&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="657" y="310" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-10" value="&lt;b&gt;Notifications&lt;/b&gt;&lt;div&gt;* push notifications for mobile&lt;/div&gt;&lt;div&gt;* webhook&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="657" y="170" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-11" value="&lt;b&gt;Simulation Engine&lt;/b&gt;&lt;br&gt;* simulate the waste collection" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="170" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-12" value="&lt;b&gt;...&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="310" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-13" value="Modules" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;strokeWidth=2;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="715" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="km08tWJIqOWvu3msnnxf-1" target="km08tWJIqOWvu3msnnxf-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="300" as="sourcePoint" />
+            <mxPoint x="400" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="km08tWJIqOWvu3msnnxf-2" target="km08tWJIqOWvu3msnnxf-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="310" as="sourcePoint" />
+            <mxPoint x="410" y="310" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="330" />
+              <mxPoint x="200" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-17" value="&lt;b&gt;PostgresSQL&lt;/b&gt;&lt;div&gt;* user data&lt;/div&gt;&lt;div&gt;* sensor data&lt;/div&gt;&lt;div&gt;* simulation&lt;/div&gt;&lt;div&gt;* simulation configurations&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="435" y="490" width="160" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-70" width="750" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-21" value="Cross Cutting Concerns" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;strokeWidth=2;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="657" y="-70" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-22" value="&lt;b&gt;Monitoring&lt;/b&gt;&lt;div&gt;* Open Telemtry&lt;/div&gt;&lt;div&gt;* Grafana &amp;amp; Prometheus&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="-10" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-23" value="&lt;b&gt;DevOps&lt;/b&gt;&lt;div&gt;* GitHub Actions&lt;/div&gt;&lt;div&gt;* Podman &amp;amp; Podman Compose&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="657" y="-10" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="km08tWJIqOWvu3msnnxf-24" value="&lt;div&gt;&lt;b&gt;Testing&lt;/b&gt;&lt;/div&gt;&lt;div&gt;* ??? -&amp;gt; probably depends on module / time / ...&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="-10" width="170" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
