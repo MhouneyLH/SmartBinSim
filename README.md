@@ -29,16 +29,17 @@ For the sake of simplicity I decided to use a monorepo approach. This way I can 
 
 ## 3. Prerequisites
 
+> **Note:** It is recommended to use the dev container for development. The dependencies are already installed in the dev container automatically with the correctly working versions.
+
 - .NET >= 8.0
-- Podman
-- Podman Compose
-- Docker (for development in dev container)
+- Docker
+- Docker Compose Plugin
 - PostgreSQL
 
 ## 4. What are the next steps?
 
-- [ ] create dev container
-- [ ] generate sensor data for the bins
+- [ X ] create dev container
+- [ X ] generate sensor data for the bins
 - [ ] find a way how to store the sensor data in a scalable way (directly to database? in a message queue?)
 - [ ] create simple API to get stored sensor data
 - [ ] build simple frontend (web) with a map and show the bins on the map and create bins
