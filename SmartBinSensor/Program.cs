@@ -1,5 +1,7 @@
 ﻿using System.CommandLine;
+using System.Text.Json;
 using SmartBinSensor;
+using SmartBinSensor.SensorMessage;
 
 var rootCommand = new RootCommand("SmartBinSensor")
 {
@@ -19,8 +21,8 @@ var rootCommand = new RootCommand("SmartBinSensor")
 rootCommand.SetHandler(
     async (int generationIntervalInMs, double initialFillPercentage, bool verbose) =>
     {
-        var sensorData = new SensorData(
-            new SensorDataId(Guid.NewGuid()),
+        var sensorMessage = new SensorMessage(
+            new SensorMessageId(Guid.NewGuid()),
             DateTime.UtcNow,
             initialFillPercentage
         );
@@ -31,16 +33,24 @@ rootCommand.SetHandler(
 
         while (!token.IsCancellationRequested)
         {
-            sensorData = sensorData with
+            sensorMessage = sensorMessage with
             {
                 Timestamp = DateTime.UtcNow,
-                FillLevel = Math.Min(100.0, sensorData.FillLevel + random.NextDouble()),
+                FillLevel = Math.Min(100.0, sensorMessage.FillLevel + random.NextDouble()),
             };
+
+            var converterOptions = new JsonSerializerOptions
+            {
+                Converters = { new SensorMessageJsonConverter() },
+            };
+            var jsonSensorMessage = JsonSerializer.Serialize(sensorMessage, converterOptions);
+
 
             if (verbose)
             {
-                Console.WriteLine($"SensorData: {sensorData}");
+                Console.WriteLine($"Sending message: {jsonSensorMessage}");
             }
+            // todo: send message to hub
 
             await Task.Delay(generationIntervalInMs);
         }
@@ -55,17 +65,3 @@ rootCommand.SetHandler(
 );
 
 await rootCommand.InvokeAsync(args);
-
-namespace SmartBinSensor
-{
-    internal sealed record SensorDataId(Guid Value);
-
-    internal sealed record SensorData(SensorDataId Id, DateTime Timestamp, double FillLevel);
-
-    internal static class DefaultConfig
-    {
-        public static readonly int GENERATION_INTERVAL_IN_MS = 1000;
-        public static readonly double INITIAL_FILL_PERCENTAGE = 0.0;
-        public static readonly bool VERBOSE = false;
-    };
-}
