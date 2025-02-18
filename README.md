@@ -32,6 +32,7 @@ For the sake of simplicity I decided to use a monorepo approach. This way I can 
 - .NET >= 8.0
 - Podman
 - Podman Compose
+- Docker (for development in dev container)
 - PostgreSQL
 
 ## 4. What are the next steps?
