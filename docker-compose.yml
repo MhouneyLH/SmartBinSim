@@ -1,0 +1,15 @@
+# ATTENTION: docker-compose only works with Docker...
+version: '3.8'
+
+services:
+  smartbinsensor:
+    image: localhost/sensor # built locally for now
+    build:
+      context: ./SmartBinSensor
+      dockerfile: Dockerfile
+    environment:
+      - GENERATION_INTERVAL_IN_MS=1000
+      - INITIAL_FILL_PERCENTAGE=0.0
+      - VERBOSE=true
+    restart: unless-stopped
+    scale: 5
