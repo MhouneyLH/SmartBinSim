@@ -1,7 +1,18 @@
 ﻿using System.CommandLine;
-using System.Text.Json;
+using DotNetEnv;
 using SmartBinSensor;
-using SmartBinSensor.SensorMessage;
+
+Env.Load();
+
+string hubBaseAddress =
+    Env.GetString("HUB_BASE_ADDRESS")
+    ?? throw new ArgumentException(
+        "HUB_BASE_ADDRESS is not set in the .env file. No connection to SmartBinHub will be possible for sending the data"
+    );
+
+Console.WriteLine("Will be sending HTTP messages to hub on base address: " + hubBaseAddress);
+
+HttpClient hubHttpClient = new() { BaseAddress = new Uri(hubBaseAddress) };
 
 var rootCommand = new RootCommand("SmartBinSensor")
 {
@@ -19,41 +30,16 @@ var rootCommand = new RootCommand("SmartBinSensor")
 };
 
 rootCommand.SetHandler(
-    async (int generationIntervalInMs, double initialFillPercentage, bool verbose) =>
+    async (generationIntervalInMs, initialFillPercentage, verbose) =>
     {
-        var sensorMessage = new SensorMessage(
-            new SensorMessageId(Guid.NewGuid()),
-            DateTime.UtcNow,
-            initialFillPercentage
+        BinSensor sensor = BinSensor.CreateNew(
+            generationIntervalInMs,
+            initialFillPercentage,
+            verbose,
+            hubHttpClient
         );
-        var random = new Random();
 
-        var canellationSource = new CancellationTokenSource();
-        var token = canellationSource.Token;
-
-        while (!token.IsCancellationRequested)
-        {
-            sensorMessage = sensorMessage with
-            {
-                Timestamp = DateTime.UtcNow,
-                FillLevel = Math.Min(100.0, sensorMessage.FillLevel + random.NextDouble()),
-            };
-
-            var converterOptions = new JsonSerializerOptions
-            {
-                Converters = { new SensorMessageJsonConverter() },
-            };
-            var jsonSensorMessage = JsonSerializer.Serialize(sensorMessage, converterOptions);
-
-
-            if (verbose)
-            {
-                Console.WriteLine($"Sending message: {jsonSensorMessage}");
-            }
-            // todo: send message to hub
-
-            await Task.Delay(generationIntervalInMs);
-        }
+        await sensor.MeasureAsync();
     },
     rootCommand
         .Children.OfType<Option<int>>()

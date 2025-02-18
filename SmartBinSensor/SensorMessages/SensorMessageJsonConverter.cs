@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SmartBinSensor.SensorMessage;
+namespace SmartBinSensor.SensorMessages;
 
 internal class SensorMessageJsonConverter : JsonConverter<SensorMessage>
 {
@@ -24,7 +24,7 @@ internal class SensorMessageJsonConverter : JsonConverter<SensorMessage>
         writer.WriteStartObject();
         writer.WriteString("sensor-id", value.Id.Value.ToString());
         writer.WriteString("timestamp", value.Timestamp.ToString("o"));
-        writer.WriteNumber("fill-level", value.FillLevel);
+        writer.WriteNumber("fill-percentage", value.FillPercentage);
         writer.WriteEndObject();
     }
 }

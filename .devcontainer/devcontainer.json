@@ -4,12 +4,13 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-dotnettools.csharp",        // C# extension
-        "ms-dotnettools.vscode-dotnet-runtime",  // .NET runtime extension (optional)
+        "ms-dotnettools.csharp", // C# extension
+        "ms-dotnettools.vscode-dotnet-runtime", // .NET runtime extension (optional)
         "ms-dotnettools.vscode-dotnet-cli", // .NET CLI extension (optional)
-        "eamodio.gitlens",               // GitLens for Git integration (optional but useful)
-        "ms-vscode.csharp",              // Also includes features like IntelliSense, debugging, etc. (optional)
-        "visualstudioexptteam.vscodeintellicode" // IntelliCode for AI-enhanced IntelliSense (optional)
+        "eamodio.gitlens", // GitLens for Git integration (optional but useful)
+        "ms-vscode.csharp", // Also includes features like IntelliSense, debugging, etc. (optional)
+        "visualstudioexptteam.vscodeintellicode", // IntelliCode for AI-enhanced IntelliSense (optional)
+        "sonarsource.sonarlint-vscode" // SonarLint for code quality (optional)
       ]
     }
   },

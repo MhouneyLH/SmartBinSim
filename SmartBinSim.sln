@@ -4,6 +4,10 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBinSensor", "SmartBinSensor\SmartBinSensor.csproj", "{34D598B9-BABF-4F85-8A95-69F434FC4BAA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartBinHub", "SmartBinHub", "{B70F6DAD-6095-4A3A-8AC2-53FF2DE1E4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "SmartBinHub\Api\Api.csproj", "{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,11 +22,18 @@ Global
 		{34D598B9-BABF-4F85-8A95-69F434FC4BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34D598B9-BABF-4F85-8A95-69F434FC4BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34D598B9-BABF-4F85-8A95-69F434FC4BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {975756B3-07AA-451F-BB0E-CFF2B847743E}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B81D629A-0852-4ABB-BDE0-F9991DBBAC1D} = {B70F6DAD-6095-4A3A-8AC2-53FF2DE1E4B7}
 	EndGlobalSection
 EndGlobal
